@@ -20,6 +20,7 @@
 
 <div class="admin-wrapper">
     {{-- Sidebar --}}
+    <div class="admin-sidebar-overlay" id="sidebarOverlay"></div>
     <aside class="admin-sidebar">
         <div class="sidebar-brand">
             <span class="brand-icon">⚡</span>
@@ -57,8 +58,13 @@
     {{-- Main Content --}}
     <main class="admin-main">
         <header class="admin-header">
-            <h1 class="admin-page-title">@yield('page_title', 'Dashboard')</h1>
-            @yield('header_actions')
+            <div class="header-title-wrapper">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <h1 class="admin-page-title">@yield('page_title', 'Dashboard')</h1>
+            </div>
+            <div class="header-actions">
+                @yield('header_actions')
+            </div>
         </header>
 
         <div class="admin-content">

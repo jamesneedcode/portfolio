@@ -50,6 +50,9 @@
         <div class="hero-badge reveal">
             <span class="badge-dot"></span> Available for work
         </div>
+        <div class="hero-profile-image reveal" style="margin-bottom: 24px;">
+            <img src="{{ asset('img/profile.jpg') }}" alt="James Trinidad" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); box-shadow: 0 8px 32px rgba(99,102,241,0.3);">
+        </div>
         <h1 class="hero-title reveal">
             Hi, I'm <span class="gradient-text">James</span><br>
             Full Stack Developer

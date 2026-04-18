@@ -252,7 +252,7 @@ body, html { height: 100%; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 14px;
-  overflow: hidden;
+  overflow-x: auto;
 }
 .admin-table {
   width: 100%;
@@ -485,3 +485,82 @@ body, html { height: 100%; }
 }
 .back-link { font-size: 13px; color: var(--text-3); transition: var(--transition); }
 .back-link:hover { color: var(--primary); }
+
+/* ─── Responsive Adjustments ────────────────────────────────── */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-1);
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.header-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 40;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--transition);
+  }
+  .admin-sidebar.active {
+    transform: translateX(0);
+  }
+  .admin-main {
+    margin-left: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .admin-sidebar-overlay {
+    display: block;
+    pointer-events: none;
+  }
+  .admin-sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .admin-content {
+    padding: 20px;
+  }
+  .admin-header {
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-table th, .admin-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+  .form-card {
+    padding: 24px;
+  }
+  .dashboard-actions .action-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
