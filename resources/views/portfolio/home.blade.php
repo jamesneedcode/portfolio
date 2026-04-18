@@ -211,7 +211,7 @@
                     <span class="contact-icon">📧</span>
                     <div>
                         <h4>Email</h4>
-                        <a href="mailto:hello@james.dev">hello@james.dev</a>
+                        <a href="mailto:jamestrinidad344@gmail.com">jamestrinidad344@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-card">
@@ -225,7 +225,7 @@
                     <span class="contact-icon">🐙</span>
                     <div>
                         <h4>GitHub</h4>
-                        <a href="#" target="_blank">github.com/james</a>
+                        <a href="#" target="_blank">github.com/jamesneedcode</a>
                     </div>
                 </div>
             </div>
