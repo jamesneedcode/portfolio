@@ -2,7 +2,10 @@
   php = "php"
 
 [phases.setup]
-  nixPkgs = ["php83", "php83Packages.composer"]
+  nixPkgs = ["php83", "php83Packages.composer", "nodejs_20", "npm"]
+
+[phases.build]
+  cmds = ["npm install", "npm run build"]
 
 [start]
   cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
